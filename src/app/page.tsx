@@ -156,7 +156,7 @@ export default function HomePage() {
             <li>Access to the &quot;Secret Weapon&quot;</li>
           </ul>
           <a
-            href="/pay" // ** Link to your actual payment page **
+            href="/#signup" // ** Link to your actual payment page **
             className="inline-block w-full bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-gray-900 font-bold py-3 px-8 rounded-lg text-lg uppercase tracking-wider shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
           >
             Join The Club Now
