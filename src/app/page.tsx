@@ -1,103 +1,213 @@
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image'; // If you plan to use optimized images
 
-export default function Home() {
+// Consider using react-icons if you want icons for features/benefits
+// import { FaCheckCircle, FaDollarSign, FaLock } from 'react-icons/fa';
+
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="flex min-h-screen flex-col items-center justify-between bg-gradient-to-b from-gray-900 via-black to-gray-900 text-gray-200">
+      {/* --- Hero Section --- */}
+      <section className="w-full h-[70vh] sm:h-[80vh] md:h-screen relative flex items-center justify-center text-center overflow-hidden px-4">
+        {/* Background Image/Video Placeholder - Replace with actual asset */}
+        {/* Example using a dark, abstract football field image */}
+        <div className="absolute inset-0 z-0 opacity-80">
+          <Image
+            src="/images/football-background.jpg" // ** Replace with your image path **
+            alt="Dark football field background"
+            layout="fill"
+            objectFit="cover"
+            quality={80}
+            priority // Load hero image faster
+          />
+          {/* Add a dark overlay */}
+          <div className="absolute inset-0 bg-black opacity-70"></div>
+        </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+        <div className="relative z-10 max-w-3xl">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 uppercase tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 drop-shadow-md">
+            I Hit It Sports
+          </h1>
+          <p className="text-lg sm:text-xl md:text-2xl mb-8 font-light text-gray-300">
+            Stop Guessing. Start Winning. Get Exclusive NFL & College Football
+            Picks From The Undisclosed Pro.
+          </p>
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#signup" // Link to your sign-up section
+            className="inline-block bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-gray-900 font-bold py-3 px-8 rounded-lg text-lg uppercase tracking-wider shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+            Get Today's Pick
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      </section>
+
+      {/* --- What It Is Section --- */}
+      <section
+        id="what-it-is"
+        className="py-16 sm:py-24 px-4 w-full max-w-4xl text-center"
+      >
+        <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-yellow-500">
+          Dominate Football Season
+        </h2>
+        <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+          Tired of losing bets and bragging rights? We deliver **daily winning
+          picks** for NFL and College Football straight to your phone or email,
+          crafted by the most successful (and secret) handicapper in the game.
+          No filler, just actionable insights designed to make you win.
+        </p>
+        {/* Static Image Placeholder (Replaced Video) */}
+        <div className="aspect-video bg-gray-800 rounded-lg shadow-xl mx-auto max-w-2xl border border-gray-700 overflow-hidden relative">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/images/promo-placeholder.jpg" // ** Replace with your image path **
+            alt="Promotional visual for I Hit It Sports picks"
+            layout="fill"
+            objectFit="cover"
+            className="opacity-90" // Adjust opacity as needed
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        </div>
+      </section>
+
+      {/* --- Why It's Good Section --- */}
+      <section
+        id="why-its-good"
+        className="py-16 sm:py-24 px-4 w-full bg-gray-900/50 border-y border-gray-700"
+      >
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-yellow-500">
+            The Insider Advantage
+          </h2>
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+            Our picks come from a legend – a handicapper who's made millions
+            betting on sports but values his anonymity. He can't show his face,
+            but he can show you how to win. This isn't luck; it's decades of
+            expertise translated into your daily edge. It's time to **HIT IT**.
+          </p>
+          {/* Feature Icons/Bullets (Optional) */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-12">
+            <div className="p-6 bg-gray-800 rounded-lg border border-gray-700 shadow-md">
+              {/* <FaLock size={30} className="mx-auto mb-4 text-yellow-500" /> */}
+              <h3 className="text-xl font-semibold mb-2 text-white">
+                Exclusive Access
+              </h3>
+              <p className="text-gray-400">
+                Picks unavailable anywhere else, from a source the public can't
+                reach.
+              </p>
+            </div>
+            <div className="p-6 bg-gray-800 rounded-lg border border-gray-700 shadow-md">
+              {/* <FaCheckCircle size={30} className="mx-auto mb-4 text-yellow-500" /> */}
+              <h3 className="text-xl font-semibold mb-2 text-white">
+                Proven Track Record
+              </h3>
+              <p className="text-gray-400">
+                Built on a history of consistent, significant wins (millions
+                made).
+              </p>
+            </div>
+            <div className="p-6 bg-gray-800 rounded-lg border border-gray-700 shadow-md">
+              {/* <FaDollarSign size={30} className="mx-auto mb-4 text-yellow-500" /> */}
+              <h3 className="text-xl font-semibold mb-2 text-white">
+                Win More Bets
+              </h3>
+              <p className="text-gray-400">
+                Stop guessing, start collecting. Impress your friends, build
+                your bankroll.
+              </p>
+            </div>
+          </div>
+          {/* Static Image Placeholder 2 (Replaced Video) */}
+          <div className="mt-12 aspect-video bg-gray-800 rounded-lg shadow-xl mx-auto max-w-2xl border border-gray-700 overflow-hidden relative">
+            <Image
+              src="/images/feature-placeholder.jpg" // ** Replace with your image path **
+              alt="Visual representing winning or insider advantage"
+              layout="fill"
+              objectFit="cover"
+              className="opacity-90" // Adjust opacity as needed
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* --- Sign Up Section --- */}
+      <section
+        id="signup"
+        className="py-16 sm:py-24 px-4 w-full max-w-4xl text-center"
+      >
+        <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-yellow-500">
+          Ready to Hit It?
+        </h2>
+        <p className="text-lg text-gray-300 mb-10">
+          Get Full Season Access to every pick. Join the Winners' Circle.
+        </p>
+
+        {/* Pricing Option Placeholder - Keep it simple for splash */}
+        <div className="bg-gray-800 border border-yellow-500/50 rounded-lg shadow-xl p-8 max-w-md mx-auto">
+          <h3 className="text-2xl font-semibold mb-4 text-white uppercase">
+            Full Season Pass
+          </h3>
+          <p className="text-4xl font-bold mb-6 text-yellow-500">$XXX</p>{' '}
+          {/* ** Replace XXX with your price ** */}
+          <ul className="text-left space-y-2 mb-8 text-gray-300 list-disc list-inside">
+            <li>Daily NFL & College Picks</li>
+            <li>Delivered via Email/Text</li>
+            <li>Exclusive Member Contests</li>
+            <li>Access to the "Secret Weapon"</li>
+          </ul>
+          <a
+            href="/pay" // ** Link to your actual payment page **
+            className="inline-block w-full bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-gray-900 font-bold py-3 px-8 rounded-lg text-lg uppercase tracking-wider shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
+          >
+            Join The Club Now
+          </a>
+        </div>
+      </section>
+
+      {/* --- Contests Section (Optional) --- */}
+      <section
+        id="contests"
+        className="py-12 sm:py-16 px-4 w-full max-w-4xl text-center bg-gray-900/30"
+      >
+        <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-yellow-500">
+          Member Perks
+        </h3>
+        <p className="text-md text-gray-400 mb-6">
+          Subscribers get exclusive entry into prize giveaways – signed gear,
+          cash prizes, and more!
+        </p>
+        {/* Graphic for prizes */}
+        <div className="mt-6">
           <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+            src="/images/contest-prizes.jpg" // ** Replace with your image path **
+            alt="Examples of member contest prizes like signed gear or cash"
+            width={320} // Example width, adjust as needed
+            height={180} // Example height, adjust as needed
+            className="mx-auto rounded-lg shadow-md border border-gray-700"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        </div>
+      </section>
+
+      {/* --- Footer --- */}
+      <footer className="w-full py-6 px-4 text-center border-t border-gray-700">
+        <p className="text-sm text-gray-500">
+          © {new Date().getFullYear()} ihititsports.com. All rights reserved.
+          Bet Responsibly.
+        </p>
+        {/* Add links to Terms & Privacy Policy here */}
+        <div className="mt-2 space-x-4">
+          <a
+            href="/terms"
+            className="text-xs text-gray-600 hover:text-yellow-500"
+          >
+            Terms of Service
+          </a>
+          <a
+            href="/privacy"
+            className="text-xs text-gray-600 hover:text-yellow-500"
+          >
+            Privacy Policy
+          </a>
+        </div>
       </footer>
-    </div>
+    </main>
   );
 }
