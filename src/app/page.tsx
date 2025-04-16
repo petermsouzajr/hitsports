@@ -28,6 +28,7 @@ export default function HomePage() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 uppercase tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 drop-shadow-md">
             I Hit It Sports
           </h1>
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
           <p className="text-lg sm:text-xl md:text-2xl mb-8 font-light text-gray-300">
             Stop Guessing. Start Winning. Get Exclusive NFL & College Football
             Picks From The Undisclosed Pro.
@@ -77,10 +78,11 @@ export default function HomePage() {
             The Insider Advantage
           </h2>
           <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-            Our picks come from a legend – a handicapper who's made millions
-            betting on sports but values his anonymity. He can't show his face,
-            but he can show you how to win. This isn't luck; it's decades of
-            expertise translated into your daily edge. It's time to **HIT IT**.
+            Our picks come from a legend – a handicapper who&apos;s made
+            millions betting on sports but values his anonymity. He can&apos;t
+            show his face, but he can show you how to win. This isn&apos;t luck;
+            it&apos;s decades of expertise translated into your daily edge.
+            It&apos;s time to **HIT IT**.
           </p>
           {/* Feature Icons/Bullets (Optional) */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-12">
@@ -90,8 +92,8 @@ export default function HomePage() {
                 Exclusive Access
               </h3>
               <p className="text-gray-400">
-                Picks unavailable anywhere else, from a source the public can't
-                reach.
+                Picks unavailable anywhere else, from a source the public
+                can&apos;t reach.
               </p>
             </div>
             <div className="p-6 bg-gray-800 rounded-lg border border-gray-700 shadow-md">
@@ -137,7 +139,7 @@ export default function HomePage() {
           Ready to Hit It?
         </h2>
         <p className="text-lg text-gray-300 mb-10">
-          Get Full Season Access to every pick. Join the Winners' Circle.
+          Get Full Season Access to every pick. Join the Winners&apos; Circle.
         </p>
 
         {/* Pricing Option Placeholder - Keep it simple for splash */}
@@ -151,7 +153,7 @@ export default function HomePage() {
             <li>Daily NFL & College Picks</li>
             <li>Delivered via Email/Text</li>
             <li>Exclusive Member Contests</li>
-            <li>Access to the "Secret Weapon"</li>
+            <li>Access to the &quot;Secret Weapon&quot;</li>
           </ul>
           <a
             href="/pay" // ** Link to your actual payment page **
