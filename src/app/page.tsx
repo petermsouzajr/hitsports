@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image'; // If you plan to use optimized images
+import Link from 'next/link'; // Import the Link component
 
 // Consider using react-icons if you want icons for features/benefits
 // import { FaCheckCircle, FaDollarSign, FaLock } from 'react-icons/fa';
@@ -155,12 +156,12 @@ export default function HomePage() {
             <li>Exclusive Member Contests</li>
             <li>Access to the &quot;Secret Weapon&quot;</li>
           </ul>
-          <a
+          <Link
             href="/#signup" // ** Link to your actual payment page **
             className="inline-block w-full bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-gray-900 font-bold py-3 px-8 rounded-lg text-lg uppercase tracking-wider shadow-lg transition duration-300 ease-in-out transform hover:scale-105"
           >
             Join The Club Now
-          </a>
+          </Link>
         </div>
       </section>
 
